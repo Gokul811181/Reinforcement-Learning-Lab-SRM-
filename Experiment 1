@@ -3,3 +3,17 @@ import pickle
 
 BOARD_ROWS = 3
 BOARD_COLS = 3
+
+    def __init__(self, p1, p2):
+        self.board = np.zeros((BOARD_ROWS, BOARD_COLS))
+        self.p1 = p1
+        self.p2 = p2
+        self.isEnd = False
+        self.boardHash = None
+        # init p1 plays first
+        self.playerSymbol = 1
+    
+    # get unique hash of current board state
+    def getHash(self):
+        self.boardHash = str(self.board.reshape(BOARD_COLS*BOARD_ROWS))
+        return self.boardHash
