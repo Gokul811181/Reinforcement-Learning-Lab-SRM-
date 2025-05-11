@@ -17,4 +17,4 @@ BOARD_COLS = 3
     def getHash(self):
         self.boardHash = str(self.board.reshape(BOARD_COLS*BOARD_ROWS))
         return self.boardHash
-1
+
